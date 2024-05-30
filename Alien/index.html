@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="player1-section" class="player-section">
+            <h2 style="color: white;">player 1</h2>
+            <div id="player1-captures" class="capture-zone"></div>
+            <div id="player1-hand" class="hand"></div>
+        </div>
+        <div id="center-card" class="center-card"></div>
+        <div id="player2-section" class="player-section">
+            <h2 style="color: white;">player 2</h2>
+            <div id="player2-captures" class="capture-zone"></div>
+            <div id="player2-hand" class="hand"></div>
+        </div>
+        <button id="draw-card-button">Robar carta</button>
+        <button id="end-turn-button">Pasar turno</button>
+    </div>
+    <script type="module" src="game.js"></script>
+</body>
+</html>

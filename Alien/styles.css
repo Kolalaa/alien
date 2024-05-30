@@ -1,0 +1,109 @@
+body {
+    background: url('/images.jpg') no-repeat center center fixed; /* Añadir fondo */
+    background-size: cover; /* Ajustar el fondo para que cubra toda la pantalla */
+    margin: 0; /* Quitar el margen */
+    padding: 0; /* Quitar el padding */
+    box-sizing: border-box; /* Asegurar que el padding y el borde se incluyen en el tamaño total */
+}
+#game {
+    padding: 20px; /* Añadir un pequeño padding alrededor del juego */
+    margin: 0 auto; /* Centrar el contenido del juego */
+    max-width: 1200px; /* Ancho máximo del juego */
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 20px;
+    width: 90vw;
+    height: 90vh;
+    position: relative;
+}
+
+.player-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+
+#player1-section {
+    bottom: 10px;
+    left: 10px;
+}
+
+#player2-section {
+    top: 10px;
+    right: 10px;
+}
+
+.hand, .captures, .center-card {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que las cartas se ajusten en múltiples filas */
+    justify-content: center; /* Centrar las cartas */
+    margin-bottom: 20px; /* Espacio entre las secciones */
+}
+
+.capture-zone {
+    display: flex;
+    flex-direction: row;
+    margin: 200px 0;
+}
+
+.card {
+    width: 100px; /* Doble del tamaño original */
+    height: 150px; /* Doble del tamaño original */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Aumentar el tamaño de la fuente */
+    margin: 10px; /* Espacio entre cartas */
+    background-color: white; /* Fondo blanco para las cartas */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las cartas */
+}
+.card:active {
+    cursor: grabbing;
+}
+
+.center-card {
+    width: 100px; /* Doble del tamaño original */
+    height: 150px; /* Doble del tamaño original */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Aumentar el tamaño de la fuente */
+    margin: 10px; /* Espacio entre cartas */
+    background-color: white; /* Fondo blanco para las cartas */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las cartas */
+}
+
+.center-card.dropzone {
+    box-shadow: 0 0 20px 5px yellow;
+}
+.turn-indicator {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white; /* Cambiar el color del texto para que sea visible sobre el fondo */
+}
+.current-turn {
+    border: 2px solid green;
+}
+
+#player1-section .capture-zone {
+    position: absolute;
+    bottom: 70px; /* Ajustar posición encima del mazo */
+    left: 10px;
+}
+
+#player2-section .capture-zone {
+    position: absolute;
+    top: 70px; /* Ajustar posición encima del mazo */
+    right: 10px;
+}
